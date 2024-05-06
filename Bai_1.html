@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+    <script>
+        function calculate(arr) {
+            let even = 0;
+            let odd = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                let num = arr[i];
+                if (num % 2 === 0) {
+                    even += num;
+                } else {
+                    odd += num;
+                }
+            }
+            return even - odd;
+        }
+
+        let n = +prompt("Nhập số phần tử của mảng: ");
+        if (n > 20) {
+            document.write("Số phần tử vượt quá giới hạn.");
+        } else {
+            let arr = [];
+            for (let i = 0; i < n; i++) {
+                arr.push(+prompt('Nhập giá trị: '));
+            }
+
+            document.write("Danh sách các giá trị của mảng: ", arr + '</br>');
+            document.write("Kết quả phép tính là: ", calculate(arr));
+        }
+
+    </script>
+</body>
+</html>

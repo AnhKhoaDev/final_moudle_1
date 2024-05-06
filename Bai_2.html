@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        function characters(string) {
+            let count = 0;
+
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] >= 'A' && string[i] <= 'Z') {
+                    count++;
+                }
+            }
+
+            if (count > 0) {
+                return count;
+            } else {
+                return "The Strings is not contain upper char";
+            }
+        }
+
+        let string = prompt("Nhập chuỗi: ");
+        document.write("Result: ", characters(string));
+    </script>
+</body>
+</html>
